@@ -51,7 +51,7 @@ build-prod:
 	@sed                                     \
 	    -e 's|{NAME}|$(MODULE)|g'            \
 	    -e 's|{VERSION}|$(VERSION)|g'        \
-	    prod.Dockerfile | docker build -t weasyprint-rest:latest -f- .
+	    prod.Dockerfile | sudo docker build -t weasyprint-rest:latest -f- .
 
 build-dev:
 	@echo "\n${BLUE}Building Development image with labels:\n"

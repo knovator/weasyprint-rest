@@ -4,6 +4,8 @@ RUN apt-get update && \
     python3 -m venv /venv && \
     /venv/bin/pip install --upgrade pip
 
+RUN apt-get install -y libpango-1.0-0
+
 FROM builder AS builder-venv
 COPY requirements.txt /requirements.txt
 RUN /venv/bin/pip install --disable-pip-version-check -r /requirements.txt
