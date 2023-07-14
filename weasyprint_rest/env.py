@@ -22,7 +22,7 @@ def get_allowed_url_pattern():
 
 
 def get_max_upload_size():
-    return int(get("MAX_UPLOAD_SIZE", 16 * 1024 * 1024))
+    return int(get("MAX_UPLOAD_SIZE", 512 * 1024 * 1024)) # 536.870912 MB
 
 
 def get_secret_key():
